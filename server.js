@@ -19,8 +19,8 @@ app.post("/submit", async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "ortoniluca7@gmail.com",
-      pass: "obzu ripx zapc pipq",
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_PASS,
     },
   });
 
